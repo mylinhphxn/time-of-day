@@ -67,7 +67,7 @@
 	  <img id = "pic" src = images/afternoon.jpg" alt="Time of Day Image" class="flexible" />
      <footer>
       <p><small>&copy; 2021- <span id="copyright"></span> by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+          Mylinh Phan, All Rights Reserved ~ 
           <a id="html-checker" href="#">Check HTML</a> ~ 
           <a id="css-checker" href="#">Check CSS</a></small>
      </p>
@@ -93,16 +93,26 @@ Night (11pm to 5am)
 	let myColor = "";
 	let myPic = "";
 
-	if(myHour < 12){//morning
+	if(myHour >= 5 && myHour < 12){//morning
 		// alert("good morning!");
 		myGreeting = "Good Morning!";
 		myColor = "orange";
 		myPic = "morning.jpg"
-	}else{//afternoon
+	}else if(myHour >= 12 && myHour < 18){//afternoon
 		// alert("good afternoon!");
 		myGreeting = "Good Afternoon!";
 		myColor = "yellow";
 		myPic = "afternoon.jpg"
+	}else if(myHour >= 18 && myHour < 23){//evening
+		myGreeting = "Good Evening!";
+		myColor = "blue";
+		myPic = "evening.jpg";
+	}else{//night
+		// alert("good night!");
+		myGreeting = "Good Night!";
+		myColor = "purple";
+		myPic = "night.jpg";
+		
 	}
 
 // the pic needs images/ in order to work
